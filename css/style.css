@@ -1,0 +1,635 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+/* font-family: 'Oswald', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Lora', serif; 
+font-family: 'PT Serif', serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;\
+font-family: 'Noto Sans Mono', monospace;*/
+
+
+:root {
+    --color-body:     rgb(97, 249, 213);
+    --color-heading: #ffffff;
+    --color-base: #000000;
+    --color-base2: rgb(21, 21, 21);
+    --color-brand: #0fb93a;
+    --color-brand2:rgb(255, 252, 1);    
+    --color-brand3:rgb(189, 186, 37); 
+    --color-background:rgb(34, 34, 34);
+    --sidbar-width: 240px;
+    --font-base: "Oswald";
+    --color-text-brand2: #74f1b7;
+    --color-text-brand3:rgb(97, 249, 213);
+}
+
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+    /* background-image: url(/css/images/Home_Newsletter_Background-2-scaled.jpg); */
+    background-repeat: no-repeat;
+}
+
+
+
+.keepintouch {
+    margin-top: 10px;
+}
+
+p  {
+    margin-bottom: 0px;
+}
+
+h1 {
+   color:  rgb(255, 255, 255)  ;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.text-brand {
+    color: var(--color-brand);
+
+}
+
+.text-brand2 {
+    color: #74f1b7 ;
+}
+
+.text-brand3 {
+    color: rgb(97, 249, 213);
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: medium;
+}
+
+.text-brand4 {
+    color: rgb(97, 249, 213);
+}
+
+h2,h3,h4,h5,h6 {
+   color: white;
+    font-weight: 600;
+}
+
+
+.fake-body, .fake-p, .fake-h1, .fake-html {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    margin: 0px;
+    color: white;
+}
+
+.fake-html{
+    position: relative;
+    left: -10px;
+}
+
+.fake-body{
+    position: relative;
+    left: -5px;
+}
+
+.fake-p{
+    position: relative;
+    left: -5px;
+}
+
+.fake-h1{
+    position: relative;
+    left: -5px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.devkid {
+    height: 40px;
+    width: 60px;
+}
+
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.midheight {
+    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: black;
+    box-shadow: 0 4px 7px 0 rgba(0,0,0,.2);
+   
+}
+
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* .navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+} */
+
+.nav-link {
+    padding: 6px;
+    margin: 5px;
+    background: rgb(0, 0, 0);
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+  }
+
+
+.nav-link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #839739;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-out;
+  }
+  .nav-link:hover {
+    color: rgb(255, 255, 255);
+  }
+  .nav-link:hover:before {
+    transform: scaleX(1);
+  }
+
+
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 20px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+}
+
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    
+    box-shadow: 0 4px 4px 0  rgba(32, 138, 55, 0.75); 
+    background: linear-gradient(to bottom, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    color: var(--color-text-brand3);
+    border-color: var(--color-brand);
+    font-weight: 700;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );  
+    border-color: var(--color-brand);
+    color: rgb(252, 252, 252);
+}
+
+
+
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* End of navbar */
+
+/* Skills */
+
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #b7c9e5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Oswald', sans-serif;
+} */
+
+.card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.card__content {
+
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  transition: transform 3s;
+  background: pink;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
+}
+
+.card__front {
+  background-color: var(--clr);
+  background-image: url(../css/images/csstry.jpg);
+  background-size: contain;
+  background-blend-mode: overlay;
+  color: #333;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px solid currentColor;
+  transform: var(--level-one);
+}
+
+.card__title {
+
+    font-size: clamp(1rem, 10vw, 2rem);
+  transform: var(--level-three);
+  order: 2;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+.card__subtitle {
+  transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: var(--fw-bold);
+  opacity: .7;
+}
+
+.card__body {
+  transform: var(--level-two);
+  font-weight: var(fw-normal);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+
+
+.card__back {
+  transform: rotateY(.5turn);
+  color: var(--clr);
+  background: #333;
+}
+
+
+/* skills  */
+
+.skilldescription i {
+    width: 10vh;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    border-radius: 0px;
+    font-size:50px;
+    margin-right: 5px;
+    color: #c2371e;
+}
+
+
+ .skilldescription .icon3 {
+    width: 10vh;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    border-radius: 0px;
+    font-size:50px;
+    margin-right: 5px;
+    color: #574deb;
+}
+
+.skilldescription .icon2 {
+    width: 10vh;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    border-radius: 0px;
+    font-size:50px;
+    margin-right: 5px;
+    color: #26a071;
+}
+
+
+  
+
+
+
+/* Projects */
+
+.project-image {
+    height: 40vh !important;
+}
+
+
+.cardholder {
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+/* end of projects */
+
+
+/* CONTACT */
+#contact .form-control {
+    background-color: #ffffff;
+    border-color: black;
+  color: black;
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+   color: rgb(69, 66, 66);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS */
+/* .social-icons {
+
+} */
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+footer {
+    background-image: url(../css/images/Home_Newsletter_Background-2-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        color: black;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .nav-link {
+        padding: 6px;
+        margin: 5px;
+        background: rgb(0, 0, 0);
+        display: inline-block;
+        transform: perspective(1px) translateZ(0);
+        position: relative;
+        left: -30px;
+        transition: color 0.3s;
+      }
+
+    .navbar-brand img {
+        border: 6px solid ;
+        border-color: var(--color-brand)
+    }
+
+    .cardholder {
+        width: 30vw;
+        height: auto;
+        margin: auto;
+        
+    }
+
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .cardholder {
+        width: 60vw;
+        height: auto;
+        margin: auto;
+    
+}
+}
