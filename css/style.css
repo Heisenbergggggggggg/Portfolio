@@ -10,16 +10,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
 
-/* font-family: 'Oswald', sans-serif;
-font-family: 'PT Serif', serif;
-font-family: 'Dancing Script', cursive;
-font-family: 'Source Code Pro', monospace;
-font-family: 'Lora', serif; 
-font-family: 'PT Serif', serif;
-font-family: 'Merriweather Sans', sans-serif;
-font-family: 'Quicksand', sans-serif;\
-font-family: 'Noto Sans Mono', monospace;*/
-
 
 :root {
     --color-body:     rgb(97, 249, 213);
@@ -41,10 +31,8 @@ body {
     background-color: var(--color-base2);
     color: var(--color-body);
     font-family: var(--font-base), sans-serif;
-    /* background-image: url(/css/images/Home_Newsletter_Background-2-scaled.jpg); */
     background-repeat: no-repeat;
 }
-
 
 
 .keepintouch {
@@ -151,6 +139,7 @@ img {
     border-bottom: 2px solid rgba(255,255,255, 0.1);
 }
 
+
 .midheight {
     min-height: 80vh;
     height: 100%;
@@ -183,11 +172,18 @@ img {
 
 /* NAVBAR */
 .navbar {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     box-shadow: 0 4px 7px 0 rgba(0,0,0,.2);
    
 }
 
+
+.navlogo {
+    color: var(--color-text-brand3);
+    font-weight: 700;
+    font-size: 24px;
+    font-family: var(--font-base);
+}
 
 .navbar .nav-link {
     font-weight: 700;
@@ -195,13 +191,7 @@ img {
     color: #fff;
 }
 
-/* .navbar .nav-link:hover {
-    color: var(--color-brand);
-}
 
-.navbar .nav-link.active {
-    color: var(--color-brand);
-} */
 
 .nav-link {
     padding: 6px;
@@ -234,83 +224,7 @@ img {
   }
 
 
-.navbar-toggler {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
-}
 
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: 0;
-    position: relative;
-}
-
-.navbar-toggler span {
-    margin: 0;
-    padding: 0;
-}
-
-.toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
-    border-radius: 1px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-.middle-bar {
-    margin-top: 0px;
-}
-
-/* State when the navbar is collapsed */
-
-.navbar-toggler.collapsed .top-bar {
-    position: absolute;
-    top: 0px;
-    transform: rotate(0deg);
-}
-
-.navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    position: absolute;
-    top: 10px;
-    filter: alpha(opacity=100);
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-    position: absolute;
-    top: 20px;
-    transform: rotate(0deg);
-}
-
-/* when navigation is clicked */
-
-.navbar-toggler .top-bar {
-    top: inherit;
-    transform: rotate(135deg);
-}
-
-.navbar-toggler .middle-bar {
-    opacity: 0;
-    top: inherit;
-    filter: alpha(opacity=0);
-}
-
-.navbar-toggler .bottom-bar {
-    top: inherit;
-    transform: rotate(-135deg);
-}
 
 /* Color of 3 lines */
 
@@ -366,143 +280,31 @@ img {
 
 /* End of navbar */
 
-/* Skills */
-
-:root {
-  --level-one: translateZ(3rem);
-  --level-two: translateZ(6rem);
-  --level-three: translateZ(9rem);
-  --fw-normal: 400;
-  --fw-bold: 700;
-  --clr: #b7c9e5;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-/* body {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: 'Oswald', sans-serif;
-} */
-
-.card {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-}
-
-.card__content {
-
-  text-align: center;
-  position: relative;
-  padding: 15em 5em;
-  transition: transform 3s;
-  background: pink;
-  transform-style: preserve-3d;
-}
-
-.card:hover .card__content {
-  transform: rotateY(.5turn);
-}
-
-.card__front,
-.card__back {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 5em 3em;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  display: grid;
-  align-content: center;
-}
-
-.card__front {
-  background-color: var(--clr);
-  background-image: url(../css/images/csstry.jpg);
-  background-size: contain;
-  background-blend-mode: overlay;
-  color: #333;
-}
-
-.card__front::before {
-  content: '';
-  position: absolute;
-  --spacer: 1em;
-  top: var(--spacer);
-  bottom: var(--spacer);
-  left: var(--spacer);
-  right: var(--spacer);
-  border: 3px solid currentColor;
-  transform: var(--level-one);
-}
-
-.card__title {
-
-    font-size: clamp(1rem, 10vw, 2rem);
-  transform: var(--level-three);
-  order: 2;
-  text-transform: uppercase;
-  color: var(--color-brand);
-}
-
-.card__subtitle {
-  transform: var(--level-two);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: .75rem;
-  font-weight: var(--fw-bold);
-  opacity: .7;
-}
-
-.card__body {
-  transform: var(--level-two);
-  font-weight: var(fw-normal);
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-
-
-.card__back {
-  transform: rotateY(.5turn);
-  color: var(--clr);
-  background: #333;
-}
-
 
 /* skills  */
 
 .skilldescription i {
-    width: 10vh;
+    width: 50px;
     height: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background);
+    background-color: var(--color-base2);
     border-radius: 0px;
     font-size:50px;
     margin-right: 5px;
     color: #c2371e;
 }
 
+/* --color-base2 */
 
  .skilldescription .icon3 {
-    width: 10vh;
+    width: 50px;
     height: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background);
+    background-color: var(--color-base2);
     border-radius: 0px;
     font-size:50px;
     margin-right: 5px;
@@ -510,12 +312,12 @@ img {
 }
 
 .skilldescription .icon2 {
-    width: 10vh;
+    width: 50px;
     height: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background);
+    background-color: var(--color-base2);
     border-radius: 0px;
     font-size:50px;
     margin-right: 5px;
@@ -523,14 +325,10 @@ img {
 }
 
 
-  
-
-
-
 /* Projects */
 
 .project-image {
-    height: 40vh !important;
+    height: 22vh !important;
 }
 
 
@@ -564,9 +362,6 @@ img {
 }
 
 /* SOCIAL ICONS */
-/* .social-icons {
-
-} */
 
 .social-icons a {
     width: 40px;
@@ -612,7 +407,7 @@ footer {
     }
 
     .cardholder {
-        width: 30vw;
+        width: 300px !important;
         height: auto;
         margin: auto;
         
@@ -625,11 +420,123 @@ footer {
     }
 }
 
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 997px) {
     .cardholder {
-        width: 60vw;
+        width: 300px !important;
+        height: auto;
+        margin: auto;
+        
+    }
+
+    #contact {
+        padding: 50px;
+    }
+}
+    
+
+@media screen and (max-width: 770px) {
+    .skillscontainer {
+        padding: 50px;
+    }
+
+    
+.skilldescription i {
+    width: 40px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base2);
+    border-radius: 0px;
+    font-size: 40px;
+    margin-right: 5px;
+    color: #c2371e;
+}
+
+.skilldescription .icon3 {
+    width: 40px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base2);
+    border-radius: 0px;
+    font-size:40px;
+    margin-right: 5px;
+    color: #574deb;
+}
+
+.skilldescription .icon2 {
+    width: 40px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base2);
+    border-radius: 0px;
+    font-size:40px;
+    margin-right: 5px;
+    color: #26a071;
+}
+
+.skillstext {
+font-size: 18px;
+margin-bottom: 0px;
+}
+
+}
+
+
+@media screen and (max-width: 575px) {
+    .navlogo {
+        color: var(--color-text-brand3);
+        font-weight: 700;
+        font-size: smaller;
+        font-family: var(--font-base);
+        margin-left: 10px;
+    }
+    
+    .navbar .nav-link {
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: smaller;
+    }
+
+
+    .cardholder {
+        width: 60vw !important;
         height: auto;
         margin: auto;
     
 }
+
+    .cardholder {
+        max-width: 280px !important;
+    }
+
+    .btn {
+        padding: 6px 14px;
+        font-size: smaller;
+    }
+
+
+    #contact {
+        padding: 30px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #contact {
+        padding: 15x;
+    }
+
+
+    .btn {
+        padding: 6px 14px;
+        font-size: smaller;
+    }
+
 }
